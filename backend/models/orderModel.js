@@ -7,12 +7,12 @@ const orderSchema = mongoose.Schema(
 			required: true,
 			ref: 'User',
 		},
-		oderItems: [
+		orderItems: [
 			{
 				name: { type: String, required: true },
 				qty: { type: Number, required: true },
 				image: { type: String, required: true },
-				price: { type: String, required: true },
+				price: { type: Number, required: true },
 				product: {
 					type: mongoose.Schema.Types.ObjectId,
 					required: true,
@@ -33,7 +33,7 @@ const orderSchema = mongoose.Schema(
 		paymentResult: {
 			id: { type: String },
 			status: { type: String },
-			updateTime: { type: String },
+			update_time: { type: String },
 			email_address: { type: String },
 		},
 		taxPrice: {
@@ -64,7 +64,7 @@ const orderSchema = mongoose.Schema(
 			required: true,
 			default: false,
 		},
-		paidAt: {
+		deliveredAt: {
 			type: Date,
 		},
 	},
