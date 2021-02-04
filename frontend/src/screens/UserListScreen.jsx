@@ -27,11 +27,13 @@ const UserListScreen = ({ history }) => {
 	}, [dispatch, history, successDelete, userInfo])
 
 	const deleteHandler = (id) => {
-		dispatch(deleteUser(id))
+		if (window.confirm('Are you sure')) {
+			dispatch(deleteUser(id))
+		}
 	}
 	return (
 		<>
-			<h1>Users{console.log('load')}</h1>
+			<h1>Users}</h1>
 			{loading ? (
 				<Loader></Loader>
 			) : error ? (
