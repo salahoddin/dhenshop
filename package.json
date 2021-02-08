@@ -28,7 +28,6 @@
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.4"
   },
-  
   "engines": {
     "node": "14.15.4"
   }
